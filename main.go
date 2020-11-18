@@ -51,6 +51,9 @@ func main() {
 			// 3. Rename it
 			if data.code() != "" {
 				copy("svg/"+data.name()+".svg", "flags/flag-"+data.name()+"-"+data.code()+".svg")
+			} else {
+
+				fmt.Println(">>>: " + data.name())
 			}
 
 		} else {
