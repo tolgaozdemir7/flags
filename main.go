@@ -44,17 +44,16 @@ func main() {
 			Code:  value[2],
 		}
 		data.shout()
+
+		// 2. Find SVG file
 		if fileExists("svg/" + data.name() + ".svg") {
 			fmt.Println(data.shout() + " file exists")
-			copy("svg/"+data.name()+".svg", "svg2/flags-"+data.name()+"-"+data.code()+".svg")
+			// 3. Rename it
+			copy("svg/"+data.name()+".svg", "flags/flags-"+data.name()+"-"+data.code()+".svg")
 		} else {
 			fmt.Println(data.shout() + " file does not exist")
 		}
 	}
-
-	// 2. Find SVG file
-
-	// 3. Rename it
 
 }
 
